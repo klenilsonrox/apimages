@@ -7,7 +7,7 @@ const router = Router()
 
 
 router.get("/users", getAllUsers)
-router.post("/users", upload.single("file"),uploadImage, createUser)
+router.post("/users",uploadImage, upload.single("file"), createUser)
 router.delete("/users/:id", deleteUser)
 
 export default router
