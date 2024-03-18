@@ -1,15 +1,10 @@
 import User from "../models/User.js";
 import { initializeApp } from "firebase/app";
-const firebaseConfig = {
-    apiKey: "AIzaSyBn58YOB2ZiXsE9jIY0TK7ocgSRHlcYbMs",
-    authDomain: "usersimages.firebaseapp.com",
-    projectId: "usersimages",
-    storageBucket: "usersimages.appspot.com",
-    messagingSenderId: "896675903279",
-    appId: "1:896675903279:web:bf8b7f55b72a18869793da",
-    measurementId: "G-002Q7KXD23"
-  };
-  const app = initializeApp(firebaseConfig);
+import {config} from "dotenv"
+
+config()
+
+  const app = initializeApp(process.env.FIREBASECONFIG);
 
 
 export const getAllUsers = async (req,res)=>{
