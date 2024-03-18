@@ -1,10 +1,11 @@
 import User from "../models/User.js";
-import { initializeApp } from "firebase/app";
 import {config} from "dotenv"
 
 config()
 
-  const app = initializeApp(process.env.FIREBASECONFIG);
+
+
+
 
 
 export const getAllUsers = async (req,res)=>{
